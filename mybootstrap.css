@@ -1,0 +1,188 @@
+/*Default height = 36px*/
+
+body{
+	width: 80%;
+	margin: 30px auto;
+	font-family: Helvetica, Arial;
+}
+
+[class^="k_btn_"]{
+	text-align: center;
+	display: inline-block;
+	height: 36px;
+	min-width: 48px;
+	line-height: 36px;
+	border-radius: 5px;
+	padding: 0px 20px;
+	color: #333;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+[class^="k_btn_"]:hover{
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  /*transition: background 0.5s;*/
+}
+
+[class^="k_btn_"]:active{
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0.1) 100%);
+  /*transition: background 0.5s;*/
+}
+
+[class^="k_btn_"][data-size="small"]{
+	font-size: 0.8em;
+	height: 28px;
+	line-height: 28px;
+	padding: 0px 10px;
+}
+
+[class^="k_btn_"][data-size="large"]{
+	font-size: 1.2em;
+	height: 42px;
+	line-height: 42px;
+	padding: 0px 25px;
+}
+
+[class^="k_btn_"][data-size="huge"]{
+	font-size: 1.6em;
+	height: 60px;
+	line-height: 60px;
+	padding: 0px 40px;
+}
+
+[class^="k_btn_"][data-icon]:before{
+	font-family: FontAwesome;
+	content: attr(data-icon);
+	border-right: 1px solid rgba(255, 255, 255, 0.36);
+	margin-right: 12px;
+	padding: 3px 12px 3px 0px;
+}
+
+
+.k_btn_default{
+	background-color: #DDD !important;
+}
+
+.k_btn_danger{
+	background-color: #E33258 !important;
+	color: #FFF;
+}
+
+
+.k_btn_info{
+	background-color: #0088CC !important;
+	color: #FFF;
+}
+
+.k_btn_warn{
+	background-color: #FFD678 !important;
+	color: #333;
+}
+
+.k_btn_success{
+	background-color: YellowGreen !important;
+	color: #FFF;
+}
+
+/*INPUT TEXTBOX*/
+
+[class^="k_txt_"]{
+	margin: 0px;
+	display: inline-block;
+	height: 36px;
+	border-radius: 5px;
+	padding: 0px 10px;
+	color: #333;
+	font-size: 0.9em;
+	border: 2px solid #ADADAD;
+	outline: none;
+}
+
+[class^="k_txt_"]:focus{
+	border: 2px solid #0088CC !important;
+}
+
+.k_txt_success{
+	border: 2px solid YellowGreen !important;
+	color: YellowGreen;
+}
+
+.k_txt_danger{
+	border: 2px solid #E33258 !important;
+	color: #E33258;
+}
+
+.k_modal_base {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+.k_modal{
+	position: absolute;
+	left: 25%;
+	right: 25%;
+	top: 25%;
+	text-align: left;
+	background-color: #FFF;
+	display: inline-block;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px;
+}
+
+.k_modal p{
+	line-height: 1.6em;
+}
+
+.k_modal .k_modal_button_group{
+	text-align: right;
+	margin-top: 20px;
+}
+
+.k_modal .k_modal_button_group [class^="k_btn_"]{
+	margin-left: 10px;
+}
+
+.k_controls_modal {
+	height: 20px;
+	position: relative;
+	width: 100%;
+	float: right;
+	top: -20px;
+	text-align: right;
+	color: rgba(0,0,0,0.5);
+}
+
+.k_wrap_txt_icon{
+	position: absolute;
+}
+
+.k_wrap_txt_icon:before{
+	position: absolute;
+	font-family: FontAwesome;
+	content: '\f002';
+	width: 36px;
+	border: 2px solid #ADADAD;
+	height: 36px;
+	background-color: #ADADAD;
+	line-height: 36px;
+	border-right: none;
+	border-radius: 5px 0px 0px 5px;
+	text-align: center;
+	color: white;
+}
+
+.k_wrap_txt_icon [class^="k_txt_"]{
+	border-radius: 0px 5px 5px 0px;
+	position: absolute;
+	left: 38px;
+}
+
+.k_wrap_txt_icon:before ~ .k_wrap_txt_icon [class^="k_txt_"]:focus  {
+	color: #0088CC;
+}
