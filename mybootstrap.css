@@ -6,6 +6,34 @@ body{
 	font-family: Helvetica, Arial;
 }
 
+.k_group_toggle{
+	display: inline-block;
+	padding: 5px;
+}
+
+.k_group_toggle  [class^="k_btn_"]{
+	margin-left: -4px;
+	border-radius: 0px;
+	border-left: 1px solid rgba(255,255,255,0.3);
+}
+
+.k_group_toggle  [class^="k_btn_"]:nth-child(2){
+	border-radius: 5px 0px 0px 5px;
+}
+
+.k_group_toggle  [class^="k_btn_"]:last-child{
+	border-radius: 0px 5px 5px 0px;
+}
+
+.k_group_toggle input[type="radio"]{
+	display: none;
+}
+
+.k_group_toggle input[type="radio"]:checked + label{
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, 0.1)));
+}
+
+
 [class^="k_btn_"]{
 	text-align: center;
 	display: inline-block;
@@ -53,9 +81,9 @@ body{
 [class^="k_btn_"][data-icon]:before{
 	font-family: FontAwesome;
 	content: attr(data-icon);
-	border-right: 1px solid rgba(255, 255, 255, 0.36);
-	margin-right: 12px;
-	padding: 3px 12px 3px 0px;
+	/*border-right: 1px solid rgba(255, 255, 255, 0.36);*/
+	margin-right: 5px;
+	padding: 3px 5px 3px 0px;
 }
 
 
@@ -158,7 +186,7 @@ body{
 	color: rgba(0,0,0,0.5);
 }
 
-.k_wrap_txt_icon{
+/*.k_wrap_txt_icon{
 	position: absolute;
 }
 
@@ -176,13 +204,52 @@ body{
 	text-align: center;
 	color: white;
 }
+*/
+.k_wrap_txt_addon{
+	display: inline-block;
+	position: relative;
+}
 
-.k_wrap_txt_icon [class^="k_txt_"]{
+.k_wrap_txt_addon [class^="k_txt_"]{
 	border-radius: 0px 5px 5px 0px;
 	position: absolute;
-	left: 38px;
+	left: 40px;
 }
 
+.k_wrap_txt_addon [class^="k_txt_"]:focus + .k_addon_txt:before{
+	background-color: #0088CC;
+}
+
+.k_wrap_txt_addon  .k_addon_txt:before{
+	font-family: FontAwesome;
+	content: '\f002';
+	position: absolute;
+	float: left;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px 0px 0px 5px;
+	border-right: none;
+	color: white;
+	background-color: #ADADAD;
+}
+
+.k_editable_div{
+display: inline-block;
+width: 218px;
+padding: 10px 8px;
+border: 2px solid #ADADAD;
+background-color: transparent;
+border-radius: 0px 5px 5px 0px;
+outline: none;
+font-size: 14px;
+
+}
+
+/*
 .k_wrap_txt_icon:before ~ .k_wrap_txt_icon [class^="k_txt_"]:focus  {
 	color: #0088CC;
-}
+}*/
+
+
