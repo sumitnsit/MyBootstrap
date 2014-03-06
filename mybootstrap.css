@@ -10,61 +10,15 @@ body{
 	display: none;
 }
 
-.k_switch:checked + [class^="k_btn_"]{
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0.3) 100%);
-  box-shadow: inset 1px 2px 5px rgba(0,0,0,0.8);
-}
-
-.k_tool_btn_grp{
-	display: inline-block;
-	position: relative;
-	height: 100%;
-	padding: 0px 10px;
-	border-right: 1px solid rgba(255,255,255,0.1);
-	box-shadow: 1px 0px 0px rgba(0,0,0,0.1);
-}
-
-.k_tool_btn:hover {
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 0.1) 100%);
-}
-
-.k_tool_btn {
-	position: relative;
-	display: inline-block;
-	min-width: 60px;
-	text-align: center;
-	color: white;
-	height: 100%;
-	padding-top: 32px;
-	font-size: 0.7em;
-	box-sizing: border-box;
-	cursor: pointer;
-}
-
-.k_tool_btn:before {
-	position: absolute;
-	font-family: FontAwesome;
-	content: attr(data-icon);
-	top: 4px;
-	left: 19px;
-	font-size: 2em;
-}
-
-.k_tool_btn:active{
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0.1) 100%);
-}
-
-.k_tool_bar{
-	height: 64px;
-	width: 100%;
-	background-color: rgb(53, 58, 87);
-	box-sizing: border-box;
-	padding: 8px 0px;
+.k_switch:checked + label{
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0.3) 100%);
+	box-shadow: inset 0px 0px 5px rgba(0,0,0,0.8);
 }
 
 .k_group_toggle{
 	display: inline-block;
 	padding: 5px;
+	-webkit-user-select: none;
 }
 
 .k_group_toggle  [class^="k_btn_"]{
@@ -86,9 +40,8 @@ body{
 }
 
 .k_group_toggle input[type="radio"]:checked + label{
-	/*background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, 0.1)));*/
-	  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0.3) 100%);
-  box-shadow: inset 1px 2px 5px rgba(0,0,0,0.8);
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0.3) 100%);
+  	box-shadow: inset 0px 0px 5px rgba(0,0,0,0.8);
 }
 
 
@@ -103,16 +56,16 @@ body{
 	color: #333;
 	font-size: 0.9em;
 	cursor: pointer;
+	-webkit-user-select: none;	
 }
 
 [class^="k_btn_"]:hover{
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 0.1) 100%);
-  /*transition: background 0.5s;*/
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 0.1) 100%);
+	transition: background 0.4s;	
 }
 
 [class^="k_btn_"]:active{
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0.1) 100%);
-  /*transition: background 0.5s;*/
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 [class^="k_btn_"][data-size="small"]{
@@ -139,7 +92,6 @@ body{
 [class^="k_btn_"][data-icon]:before{
 	font-family: FontAwesome;
 	content: attr(data-icon);
-	/*border-right: 1px solid rgba(255, 255, 255, 0.36);*/
 	margin-right: 5px;
 	padding: 3px 5px 3px 0px;
 }
@@ -244,25 +196,6 @@ body{
 	color: rgba(0,0,0,0.5);
 }
 
-/*.k_wrap_txt_icon{
-	position: absolute;
-}
-
-.k_wrap_txt_icon:before{
-	position: absolute;
-	font-family: FontAwesome;
-	content: '\f002';
-	width: 36px;
-	border: 2px solid #ADADAD;
-	height: 36px;
-	background-color: #ADADAD;
-	line-height: 36px;
-	border-right: none;
-	border-radius: 5px 0px 0px 5px;
-	text-align: center;
-	color: white;
-}
-*/
 .k_wrap_txt_addon{
 	display: inline-block;
 	position: relative;
@@ -293,21 +226,83 @@ body{
 	background-color: #ADADAD;
 }
 
-.k_editable_div{
-display: inline-block;
-width: 218px;
-padding: 10px 8px;
-border: 2px solid #ADADAD;
-background-color: transparent;
-border-radius: 0px 5px 5px 0px;
-outline: none;
-font-size: 14px;
+.k_toolbar{
+	background-color: #353535;
+	height: 72px;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.k_toolbar_separator{
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 0px 2px;
+	border-left: 1px solid rgba(255,255,255,0.2);
+	box-shadow: -1px 0px 0px rgba(0,0,0,0.3);
+}
+
+
+.k_toolbar_tools{
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 0px 4px;
+	border-left: 1px solid rgba(255,255,255,0.2);
+	box-shadow: -1px 0px 0px rgba(0,0,0,0.3);
+}
+
+.k_toolbar_tool{
+	font-family: Helvetica, Ubuntu, Arial;
+	display: table-cell;
+	vertical-align: bottom;
+	height: 42px;
+	width: 48px;
+	position: relative;
+	text-align: center;
+	font-size: 10px;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.2);
+	line-height: 12px;
+	border-radius: 5px;
+	color: rgba(255,255,255,0.8);
+	transition: background 0.4s;
+	-webkit-user-select: none;
+}
+
+.k_toolbar_tools input[type="checkbox"]{
+	display: none;
+}
+
+.k_toolbar_tools input[type="checkbox"]:checked + label{
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.k_toolbar_tool:hover{
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 5px;
+	transition: background 0.4s;
 
 }
 
-/*
-.k_wrap_txt_icon:before ~ .k_wrap_txt_icon [class^="k_txt_"]:focus  {
-	color: #0088CC;
-}*/
+.k_toolbar_tool:active{
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	transition: background 0.4s;
+}
 
+.k_toolbar_tool:before{
+	position: absolute;
+	width: 48px;
+	left: 0px;
+	bottom: 12px;
+	font-size: 24px;
+	line-height: 30px;
+	font-family: FontAwesome;
+	content: attr(data-icon);				
+}
 
+.k_toolbar_toggle{
+	display: inline-block;
+}
