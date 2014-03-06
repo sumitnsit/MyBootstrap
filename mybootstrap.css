@@ -6,6 +6,62 @@ body{
 	font-family: Helvetica, Arial;
 }
 
+.k_switch{
+	display: none;
+}
+
+.k_switch:checked + [class^="k_btn_"]{
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0.3) 100%);
+  box-shadow: inset 1px 2px 5px rgba(0,0,0,0.8);
+}
+
+.k_tool_btn_grp{
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	padding: 0px 10px;
+	border-right: 1px solid rgba(255,255,255,0.1);
+	box-shadow: 1px 0px 0px rgba(0,0,0,0.1);
+}
+
+.k_tool_btn:hover {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.k_tool_btn {
+	position: relative;
+	display: inline-block;
+	min-width: 60px;
+	text-align: center;
+	color: white;
+	height: 100%;
+	padding-top: 32px;
+	font-size: 0.7em;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.k_tool_btn:before {
+	position: absolute;
+	font-family: FontAwesome;
+	content: attr(data-icon);
+	top: 4px;
+	left: 19px;
+	font-size: 2em;
+}
+
+.k_tool_btn:active{
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.k_tool_bar{
+	height: 64px;
+	width: 100%;
+	background-color: rgb(53, 58, 87);
+	box-sizing: border-box;
+	padding: 8px 0px;
+}
+
 .k_group_toggle{
 	display: inline-block;
 	padding: 5px;
@@ -30,7 +86,9 @@ body{
 }
 
 .k_group_toggle input[type="radio"]:checked + label{
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, 0.1)));
+	/*background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, 0.1)));*/
+	  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0.3) 100%);
+  box-shadow: inset 1px 2px 5px rgba(0,0,0,0.8);
 }
 
 
