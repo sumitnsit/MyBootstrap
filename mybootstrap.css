@@ -6,6 +6,123 @@ body{
 	font-family: Helvetica, Arial;
 }
 
+
+.k_select:after{
+	font-family: FontAwesome;
+	content: '\f0dd';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 30px;
+	height: 30px;
+	line-height: 26px;
+	background-color: #CCC;
+	border-radius: 0px 4px 4px 0px;
+	text-align: center;
+	color: #666;
+}
+
+.k_select:focus:before{
+	border-color: red;
+}
+
+.k_select:hover input[type="text"]{
+	border-color: #0088CC;
+}
+
+.k_select:hover:after{
+	background-color: #0088CC;
+	color: white;
+}
+
+.k_select:before{
+	content: 'None';
+	line-height: 30px;
+	padding-left: 10px;
+	top: 0px;
+	box-sizing: border-box;
+	position: absolute;
+	background-color: white;
+	width: 100%;
+	height: 30px;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+}
+
+.k_select{
+	position: relative;
+	
+	display: inline-block;	
+	min-width: 300px;
+	padding-top: 32px;
+}
+
+.k_select .k_option:first-child{
+	border-top: 3px solid #CCC;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.k_select .k_option:last-child{
+	border-bottom: 3px solid #CCC;
+	border-radius: 0px 0px 4px 4px;
+}
+
+.k_option:active ~ [data-value]{
+	value: 'adfa';
+}
+
+.k_select input[type="text"]{
+	display: block;
+width: 100%;
+position: absolute;
+top: 0px;
+box-sizing: border-box;
+height: 30px;
+/* background-color: red; */
+line-height: 30px;
+border: 1px solid #CCC;
+border-radius: 4px;
+padding-left: 10px;
+font-size: 1em;
+outline: none;
+}
+
+.k_select .k_option{
+	display: block;
+	cursor: pointer;
+	line-height: 30px;
+	box-sizing: border-box;
+	padding: 0px 10px;
+	background-color: #EEE !important;
+	border-left: 3px solid #CCC;
+	border-right: 3px solid #CCC;
+	/*display: none;*/
+}
+
+.k_select .k_option:hover{
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, .3) 0%, rgba(255, 255, 255, 0.2) 100%);
+}
+.k_img_btn_center{
+	display: inline-block;
+	width: 36px;
+	height: 40px;
+	background-image: url('images/center_unselected.png');
+}
+
+.k_img_btn_tile{
+	display: inline-block;
+	width: 36px;
+	height: 40px;
+	background-image: url('images/center_unselected.png');
+}
+
+.k_img_btn_tile_horz{
+	display: inline-block;
+	width: 36px;
+	height: 40px;
+	background-image: url('images/center_unselected.png');
+}
+
 .k_switch{
 	display: none;
 }
@@ -95,6 +212,7 @@ body{
 	margin-right: 5px;
 	padding: 3px 5px 3px 0px;
 }
+
 
 
 .k_btn_default{
