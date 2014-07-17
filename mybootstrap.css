@@ -7,6 +7,121 @@ body{
 }
 
 
+.shape_circle{
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: #0088CC;
+	border-radius: 100%;
+}
+
+.shape_elipse{
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: 100px;
+	background-color: #0088CC;
+	border-radius: 100% 100%;
+}
+
+.shape_skew{
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: #0088CC;
+	-webkit-transform: skew(-15deg);
+}
+
+.shape_flag{
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 100px;
+	background-color: #0088CC;
+	box-sizing: border-box;
+}
+
+.shape_flag:after{
+position: absolute;
+content: '';
+border-left: 35px solid transparent;
+border-bottom: 20px solid rgb(255, 255, 255);
+bottom: 0px;
+border-right: 35px solid transparent;
+}
+.shape_pac{
+	position: relative;
+	display: inline-block;
+	border-radius: 100%;
+	border: 50px solid #0088CC;
+	border-right-color:	transparent; 
+}
+
+.shape_triangle{
+	position: relative;
+	display: inline-block;
+}
+.shape_triangle:before{
+	content: '';
+display: inline-block;
+border-bottom: 100px solid #0088CC;
+box-sizing: border-box;
+width: 100px;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+}
+
+
+.yang{
+	display: inline-block;
+	width: 96px;
+	height: 48px;
+	background: #eee;
+	border-color: #0088CC;
+	border-style: solid;
+	border-width: 2px 2px 50px 2px;
+	border-radius: 100%;
+	position: relative;
+	margin-left: 20px;
+}
+
+.yang:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background: #eee;
+	border: 18px solid #0088CC;
+	border-radius: 100%;
+	width: 12px;
+	height: 12px;
+}
+.yang:after{
+		content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #0088CC;
+	border: 18px solid #eee;
+	border-radius:100%;
+	width: 12px;
+	height: 12px;
+}
+
+.cone{
+position: relative;
+display: inline-block;
+width: 100px;
+height: 100px;
+border-top: 100px solid #0088CC;
+box-sizing: border-box;
+border-left: 60px solid transparent;
+border-right: 60px solid transparent;
+border-radius: 50%;
+}
+
 .k_select:after{
 	font-family: FontAwesome;
 	content: '\f0dd';
